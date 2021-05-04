@@ -70,11 +70,11 @@ If you have a web site set up for your module, mention it here.
 
 =head1 AUTHOR
 
-李俊宏, E<lt>lijunhong@nonetE<gt>
+mizu-bai, E<lt>mizu-bai@nonetE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2021 by 李俊宏
+Copyright (C) 2021 by mizu-bai
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.32.1 or,
