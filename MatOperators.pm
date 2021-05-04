@@ -16,8 +16,8 @@ sub mat_add {
     if (not ($i1 == $i2 and $j1 == $j2)) {
         die "Error: Sizes of matrixs do not match.\n";
     }
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j1 - 1) {
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j1 - 1) {
             $res_ref->[$i][$j] = $mat1_ref->[$i][$j] + $mat2_ref->[$i][$j];
         }  
     }
@@ -38,8 +38,8 @@ sub mat_minus {
     if (not ($i1 == $i2 and $j1 == $j2)) {
         die "Error: Sizes of matrixs do not match.\n";
     }
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j1 - 1) {
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j1 - 1) {
             $res_ref->[$i][$j] = $mat1_ref->[$i][$j] - $mat2_ref->[$i][$j];
         }  
     }
@@ -60,10 +60,10 @@ sub mat_multiply {
     if ($j1 != $i2) {
         die "Error: Sizes of matrixs do not match.\n";
     }
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j2 - 1) {
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j2 - 1) {
             my $sum = 0;
-            for $k (0 .. $j1 - 1) {
+            for my $k (0 .. $j1 - 1) {
                 $sum += $mat1_ref->[$i][$k] * $mat2_ref->[$k][$j];
             }
             $res_ref->[$i][$j] = $sum;
@@ -86,8 +86,8 @@ sub mat_dot {
     if (not ($i1 == $i2 and $j1 == $j2)) {
         die "Error: Sizes of matrixs do not match.\n";
     }
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j1 - 1) {
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j1 - 1) {
             $res_ref->[$i][$j] = $mat1_ref->[$i][$j] * $mat2_ref->[$i][$j];
         }
     }
@@ -98,13 +98,13 @@ sub mat_num_multiply {
     # @param $num
     # @param $mat1_ref
     # @return $res_ref
-    $num = shift;
-    $mat1_ref = shift;
-    $res_ref = [];
-    $i1 = @$mat1_ref;
-    $j1 = @{$mat1_ref->[0]};
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j1 - 1) {
+    my $num = shift;
+    my $mat1_ref = shift;
+    my $res_ref = [];
+    my $i1 = @$mat1_ref;
+    my $j1 = @{$mat1_ref->[0]};
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j1 - 1) {
             $res_ref->[$i][$j] = $num * $mat1_ref->[$i][$j];
         }
     }
@@ -116,10 +116,10 @@ sub mat_T {
     # @return $res_ref
     my $mat1_ref = shift;
     my $res_ref = [];
-    $i1 = @$mat1_ref;
-    $j1 = @{$mat1_ref->[0]};
-    for $i (0 .. $i1 - 1) {
-        for $j (0 .. $j1 - 1) {
+    my $i1 = @$mat1_ref;
+    my $j1 = @{$mat1_ref->[0]};
+    for my $i (0 .. $i1 - 1) {
+        for my $j (0 .. $j1 - 1) {
             $res_ref->[$j][$i] = $mat1_ref->[$i][$j];
         }
     }
