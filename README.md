@@ -1,6 +1,6 @@
 # MatOperators
 
-Matrix Operators wrote in Perl.
+Matrix Operators written in Perl.
 
 ## Operators
 
