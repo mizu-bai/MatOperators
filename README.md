@@ -12,7 +12,7 @@ Matrix Operators written in Perl.
 
 * `mat_dot($mat1_ref, $mat2_ref)`
 
-* `mat_num($num, $mat1_ref)`
+* `mat_num_multiply($num, $mat1_ref)`
 
 * `mat_T($mat1_ref)`
 
